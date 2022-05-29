@@ -42,3 +42,39 @@
 body{
   background: grey;
 }
+.menu{
+  background: #534C4C;
+}
+.imgNavbar{
+  width: 10em;
+}
+.imgNavbar:hover{
+  animation: animate 2s alternate infinite;
+}
+@keyframes animate {
+  0%{
+    transform: rotateX(0deg);
+}
+  50%{
+    transform: rotateX(360deg);
+}
+  100%{
+    transform: rotateX(0deg);
+}
+  
+}
+.number{
+  color: rgb(255, 255, 255);
+  background: #343537;
+  border-radius: 3em 9em 11em 12em;
+  font-size: 11px;
+  padding: 2px;
+}
+.cart{
+  margin-left: 10em;
+}
+@media (max-width: 1010px){
+  .cart{
+    margin-left: 0;
+  }
+}
