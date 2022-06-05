@@ -38,13 +38,16 @@
 }
 .nav-link{
   margin-left: 100px;
+  color: white;
 }
-body{
-  background: grey;
+.nav-link:hover{
+  color: #CF7718;
 }
+
 .menu{
-  background: #534C4C;
+  background: black;
 }
+
 .imgNavbar{
   width: 10em;
 }
@@ -63,18 +66,28 @@ body{
 }
   
 }
-.number{
-  color: rgb(255, 255, 255);
-  background: #343537;
-  border-radius: 3em 9em 11em 12em;
-  font-size: 11px;
-  padding: 2px;
-}
 .cart{
-  margin-left: 10em;
+  margin-left: 5em;
 }
+
 @media (max-width: 1010px){
   .cart{
     margin-left: 0;
   }
+}
+.numberPadre{
+  position: relative;
+}
+.numberHijo{
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  background: #76736f;
+  border-radius: 119px;
+  width: 20px;
+  padding-left: 5px;
+
+}
+.parrafoCard{
+  color: aliceblue;
 }

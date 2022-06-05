@@ -2,7 +2,7 @@ import React from 'react'
 import CartWidget from "./CartWidget"
 const NavBar = () => {
     return (
-    <nav className="navbar navbar-expand-lg navbar-dark menu">
+    <nav className="navbar navbar-expand-lg  menu">
         <div className="container-fluid ">
             <a className="navbar-brand" href="#"><img src={require('../Assets/logo.png')} className="imgNavbar"/></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@ const NavBar = () => {
                 </ul>
                 </li>
                 <li className="nav-item cart">
-                <a className="nav-link " href="#"><CartWidget number= {4} /></a>
+                <a className="nav-link" href="#"><CartWidget number= {4} /></a>
                 </li>
             </ul>
             </div>
