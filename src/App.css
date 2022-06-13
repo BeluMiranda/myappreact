@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+:root {
+  --tittleblack: #000000;
+}
 .nav-link{
   margin-left: 100px;
   color: white;
@@ -53,4 +57,69 @@
 .parrafoCard{
   color: aliceblue;
 }
+button{
+  color: rgb(27, 30, 29);
+  border: 1px solid rgb(24, 22, 22);
+}
+.cardd{
+  background-color: rgb(26, 30, 33);
+}
+.itemList{
+  display: flex;
+  justify-content: center;
+}
+.itemListContainer{
+  background: black;
+}
+.loading{
+  color: azure;
+  font-size: 2em;
+}
+.itemCount{
+  background: black;
+  width: 100%;
+  margin: 0;
+  height: auto;
+}
 
+.input-size {
+  width: 5rem !important; 
+
+}
+/*CARD*/
+.card-size{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  background-color: rgba(164, 160, 160, 0.408);
+  color: black;
+}
+.card-size img{
+  height: 15rem;
+  object-fit: cover;
+}
+
+.card-title{
+  color: var(--tittleblack);
+  font-size: 1.2rem;
+  text-align: center;
+}
+.card-btn:hover{
+  color: aqua;
+}
+.btn-add {
+  justify-items: center;
+}
+.card-bodyy{
+  width: 300px;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+  justify-content: center;
+  box-shadow: 0 0 10px #000000;
+  background-color: #ffffff;
+}
+.card img{
+  width: 100%;
+  margin: auto;
+}

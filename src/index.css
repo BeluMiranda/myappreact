@@ -1,73 +1,10 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-:root {
-  --tittleblack: #000000;
-}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  letter-spacing: 3px;
 }
 
-.header{
-  background-image: url(./Assets/Desktop\ -\ 5.png);
-  width: 100%;
-  height: 110vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-}
-button{
-  color: rgb(27, 30, 29);
-  border: 1px solid rgb(24, 22, 22);
-}
-.cardd{
-  background-color: rgb(26, 30, 33);
-}
-.itemList{
-  display: flex;
-  justify-content: center;
-}
-.itemListContainer{
-  background: black;
-}
-.loading{
-  color: azure;
-  font-size: 2em;
-}
-.itemCount{
-  background: black;
-  width: 100%;
-  margin: 0;
-  height: auto;
-}
-.card-size{
-  width: 20rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  background-color: grey;
-  color: black;
-}
-.card-size img{
-  height: 15rem;
-}
 
-.card-title{
-  color: var(--tittleblack);
-  font-size: 1.2rem;
-  text-align: center;
-}
-.input-size {
-  width: 5rem !important; 
-}
-.card-btn:hover{
-  color: aqua;
-}
-.btn-add {
-  justify-items: center;
-}
 

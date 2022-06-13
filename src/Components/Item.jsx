@@ -5,7 +5,7 @@ const Item = ({shoee}) => {
     return (
         <>
           <div className="card card-size mt-5">
-                <div className="card-body">
+                <div className="card-bodyy">
                     <h5 className="card-title fw-bolder"> {nombre} </h5>
                     <img src={photo} className="card-img-top" alt="..."></img>
                     <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
