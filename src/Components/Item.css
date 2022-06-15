@@ -1,0 +1,86 @@
+
+.producto{
+    max-width: 280px;
+    display: flex;
+    flex-flow: column;
+    border-radius: 6px;
+    box-shadow: 0 0 0.1em rgb(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+    margin: 3em;
+}
+.producto:hover{
+    box-shadow: 0 0 1.5em rgb(0, 0, 0, 0.2);
+}
+.producto > img {
+    width: 100%;
+    object-fit: cover;
+}
+.informacion{
+    border-top: 1px solid rgb(230, 230, 230);
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+}
+.informacion * + * {
+    margin-bottom: 0.5em;
+
+}
+.tipoenvio{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    max-width: max-content;
+    padding: 0 0.2em;
+    border-radius: 3px;
+
+}
+.precio{
+    font-size: 1.5em;
+}
+.costo-envio{
+    color: rgb(0, 166, 80);
+}
+.description .ubicacion{
+    font-weight: 300;
+}
+.costo-envio .description .ubicacion{
+    font-size: 0.9em;
+}
+.calificacion, .ubicacion{
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+}
+.producto:hover .calificacion,
+.producto:hover .ubicacion{
+    opacity: 1;
+}
+.tipoenvio, .calificacion{
+    font-size: 0.8em;
+}
+.calificacion > span:first-child{
+    color: rgb(0, 0, 0);
+}
+.calificacion{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+}
+.calificacion > *{
+    margin: 0;
+}
+.description{
+    opacity: 0.8;
+}
+.shop{
+    margin: auto;
+    border-radius: 30px;
+    padding: 6px 20px;
+    border: 1.5px solid transparent;
+}
+.shop:hover{
+    background-color: rgb(150, 150, 150, 0.8);
+}

@@ -4,16 +4,16 @@ import React from 'react';
 const Header = () => {
     return (
         <>
-            <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleInterval" className="carousel slide header" data-bs-ride="carousel">
             <div className="carousel-inner">
-                <div className="carousel-item active" data-bs-interval="10000">
-                <img src={require('../Assets/Desktop - 5.png')} className="d-block w-100" alt="..."/>
+                <div className="carousel-item active" data-bs-interval="2000">
+                <img src={require('../Assets/Desktop - 5.png')} className="d-block w-100 h-75" alt="..."/>
                 </div>
                 <div className="carousel-item" data-bs-interval="2000">
-                <img src={require('../Assets/banner2.png')} className="d-block w-100" alt="..."/>
+                <img src={require('../Assets/banner2.png')} className="d-block w-100 h-75" alt="..."/>
                 </div>
-                <div className="carousel-item">
-                <img src={require('../Assets/banner3.png')} className="d-block w-100" alt="..."/>
+                <div className="carousel-item" data-bs-interval="2000">
+                <img src={require('../Assets/banner3 1.png')} className="d-block w-100 h-75" alt="..."/>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">

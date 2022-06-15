@@ -1,22 +1,36 @@
 import React from "react"
 import './ItemDetail.css'
 function ItemDetail({productDetail}) {
-    const {nombre, photo, description, price, category} = productDetail
+    const {id, photo1, photo2, photo3, photo4, nombre, description, price, category} = productDetail
+    
     
 	return (
         <>
-          <div className="item-detail-contenedor">
-            <div className="item-detail-featured-img">
-                <img className="item-detail-img grow" src={photo} alt={nombre}/>
+          <section id="prodetails" className="section-p1">
+            <div className="single-pro-imagen">
+                <img className="ft" src={photo1} alt={nombre} style={{with:"100%"}} id="mainImage"/>
+                <div className="small-image-group">
+                    <div className="small-img-col">
+                        <img src={photo2} style={{with:"70%"}} className="small-img" />
+                    </div>
+                    <div className="small-img-col">
+                        <img src={photo3} style={{with:"70%"}} className="small-img" />
+                    </div>
+                    <div className="small-img-col">
+                        <img src={photo4} style={{with:"70%"}} className="small-img" />
+                    </div>
+                </div>
             </div>
-        <div className="item-detail-info">
-            <h2>{nombre}</h2>
-            <h6>{category}</h6>
-            <p>{description}</p>
-            <h4>${price}</h4>
-            <button className="buttonCardDetail">Add to cart</button>
-        </div>
-        </div>
+            <div className="single-pro-details">
+                
+                <h4>{nombre}</h4>
+                <h2>${price}</h2>
+                
+                <h4 className="descr">Description</h4>
+                <span>{description}</span>
+                <button className="normal">Add to Cart</button>
+            </div>
+          </section>
     </>	
 	)
 

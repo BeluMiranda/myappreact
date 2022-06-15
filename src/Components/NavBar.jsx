@@ -1,38 +1,43 @@
 import React from 'react'
 import CartWidget from "./CartWidget"
+import { Link } from 'react-router-dom'
 const NavBar = () => {
     return (
-    <nav className="navbar navbar-expand-lg  menu">
-        <div className="container-fluid ">
-            <a className="navbar-brand" href="#"><img src={require('../Assets/logo.png')} className="imgNavbar"/></a>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light  menu">
+        <div className="container-fluid">
+        <Link to="/" className="navbar-brand"><img src={require('../Assets/logo.png')} className="imgNavbar"/></Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav mx-auto">
                 <li className="nav-item">
-                <a className="nav-link active ms-1" aria-current="page" href="#">MEN</a>
+                <Link to="/category/men" className="nav-link linkk">MEN</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="#">WOMEN</a>
+                <Link to="/category/women" className="nav-link linkk">WOMEN</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="#">KIDS</a>
+                <Link to="/category/kids" className="nav-link linkk" >KIDS</Link>
                 </li>
                
                 <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    COLECTION
+                    COLECTION 
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a className="dropdown-item" href="#">Action</a></li>
-                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                    <li><Link to="/colection/news" className="dropdown-item" >News Arrivals</Link></li>
+                    <li><Link to="/colection/lastyear" className="dropdown-item" >Season 2021</Link></li>
                 </ul>
+               
+                </li>
+                <li className="nav-item">
+                <Link to="/category/kids" className="nav-link linkk" >CONTACTO</Link>
                 </li>
                 <li className="nav-item cart">
                 <a className="nav-link" href="#"><CartWidget number= {4} /></a>
                 </li>
+                
             </ul>
             </div>
         </div>
