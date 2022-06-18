@@ -1,7 +1,19 @@
 import React from "react"
 import './ItemDetail.css'
+import './ItemCount'
+import ItemCount from "./ItemCount"
+
+const add = (count) => {
+    if (count === 1) {
+      alert("Se agregó 1 producto");
+    } else {	
+    alert(`Se agregaron ${count} productos.`);
+    }
+    
+}
+
 function ItemDetail({productDetail}) {
-    const {id, photo1, photo2, photo3, photo4, nombre, description, price, category} = productDetail
+    const {id, photo1, photo2, photo3, photo4, nombre, description, price, category, stock} = productDetail
     
     
 	return (
@@ -28,7 +40,8 @@ function ItemDetail({productDetail}) {
                 
                 <h4 className="descr">Description</h4>
                 <span>{description}</span>
-                <button className="normal">Add to Cart</button>
+                
+                <ItemCount stock={stock} initial={1} onAdd={add}/>
             </div>
           </section>
     </>	

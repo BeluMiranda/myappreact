@@ -6,6 +6,9 @@
   margin-left: 40px;
   
 }
+.nav-link:active{
+  color: aquamarine;
+}
 .nav-link:hover{
   color: #000000;
 }
@@ -149,3 +152,19 @@
   margin-left: 50px;
   margin-right: 50px;
 }
+.navbar-nav .nav-link:active{
+  color: aquamarine;
+}
+.groupBottons{
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  height: 51px;
+  border: 1px solid transparent;
+  margin-top: 20px;
+  margin-left: -12px;
+}
+.h2{
+ margin: auto;
+}
+

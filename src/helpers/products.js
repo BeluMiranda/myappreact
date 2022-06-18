@@ -18,9 +18,10 @@ const libros = [
         stock: 4,
         price: 20000,
         category: "women",
-        photo2: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/w2ldynwtyuspv6r5rffj/calzado-air-max-90-6n3vKB.png",
-        photo3: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/w2ldynwtyuspv6r5rffj/calzado-air-max-90-6n3vKB.png",
-        photo4: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/w2ldynwtyuspv6r5rffj/calzado-air-max-90-6n3vKB.png",
+        photo2: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cc3a56f0-764b-43d3-a0d5-3c33bc2fef3b/calzado-air-max-270-7VpJSG.png",
+        photo3: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ouweg5dax808k3vqipcr/calzado-air-max-270-Pgb94t.png",
+        photo4: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/445f83ed-9c01-4af8-bd2c-9127001afc47/calzado-air-max-270-Pgb94t.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
         
         
     },
