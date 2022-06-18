@@ -18,4 +18,3 @@ You may also see any lint errors in the console.
 This project is an e-commerse about shoes, was created in the course of CoderHouse.                                                                                                  
 ********LIBRARIES*********
 Bootstrap, sweetAlert, font Awesome.
-
