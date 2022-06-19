@@ -5,6 +5,7 @@ import React from 'react';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import Home from './Components/Home';
 import ItemListContainer from './Components/ItemListContainer';
+import Myprovider from './Components/Context/CartContext';
 
 
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
        <BrowserRouter>
+       <Myprovider>
        <NavBar />
        <Routes>
         <Route path='/' element={<Home />} />
@@ -22,6 +24,7 @@ function App() {
         
         <Route path='/item/:id' element={<ItemDetailContainer />} />
         </Routes>
+        </Myprovider>
         </BrowserRouter> 
     </>
   );
