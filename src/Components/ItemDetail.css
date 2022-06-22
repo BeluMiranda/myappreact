@@ -1,100 +1,13 @@
-/** {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-            box-sizing: border-box;
-  }
 
-.item-detail-contenedor {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 50em;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin: 5px;
-}
-.item-detail-img {
-    max-width: 400px;
-    transition: transform .2s;
-    cursor: pointer;
-}
-
-.item-detail-img:hover {
-    transform: scale(1.5);
-} 
-
-.item-detail-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 70%;
-    padding-left: 20px;
-}
-.item-detail-info p {
-    font-size: 14px;
-    color: #1b1b1b;
-    padding-right: 5%;
-}
-.item-detail-featured-img {
-   
-    height: 400px;
-    width: 400px;
-    margin: 20px;
-    overflow: hidden;
-    -webkit-box-shadow: 5px 5px 5px #111;
-    box-shadow: 5px 5px 5px #111;  
-}
-.buttonCardDetail{
-    margin: auto;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 1px 5px 1px 5px;
-}
-.buttonCardDetail:hover{
-    background-color: black;
-    color: white;
-}
-@media (max-width: 795px) { 
-    .item-detail-contenedor{
-        display: flex;
-        flex-direction: column;
-        width: 28em;
-        align-items: center
-    } 
-    .item-detail-contenedor img{
-        overflow: hidden;
-        width: auto;
-    }
-}
-@media (max-width: 454px){
-    .item-detail-contenedor {
-        overflow: hidden;
-        width: 25em;
-        align-items: center
-    }
-    .item-detail-featured-img{
-        width: auto;
-    }
-}
-@media (max-width: 350px){
-    .item-detail-contenedor {
-        overflow: hidden;
-        width: 20em;
-        align-items: center;
-    }
-    .item-detail-featured-img{
-        width: auto;
-    }
-}*/
 #prodetails{
     display: flex;
-    margin-top: 20px;
+    background-color: brown;
 }
 #prodetails .single-pro-imagen{
     width: 40%;
     margin-right: 50px;
     height: 4484px;
+    margin-top: 80px;
 }
 .small-image-group{
     display: flex;
@@ -111,7 +24,7 @@
 }
 #prodetails .single-pro-details{
     width: 50%;
-    
+    margin-top: 80px;
 }
 #prodetails .single-pro-details h4{
     padding: 0px 0 50px;
@@ -155,8 +68,6 @@
 }
 .add{
     border: 2px solid transparent;
-    width: 200px;
-    height: 100px;
     justify-content: center;
     align-items: center;
   }
@@ -172,3 +83,20 @@
   .buttonAdd:hover{
     transform: scale(1.1);
   }
+  .cajaBtn{
+    width: 200px;
+    height: 100px;
+    margin-top: 1em;
+  }
+  .btnGoToCart{
+    background: black;
+    color: white;
+    padding: 3px;
+    left: 48.3%;
+    border-radius: 5px;
+    transition: transform .2s;
+    margin: 0;
+  }
+  .btnGoToCart:hover{
+    transform: scale(1.1);
+}

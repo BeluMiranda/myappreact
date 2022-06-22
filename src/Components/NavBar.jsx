@@ -1,13 +1,18 @@
 import React from 'react'
 import CartWidget from "./CartWidget"
 import { Link } from 'react-router-dom'
-const NavBar = () => {
+const NavBar = ({isScrolling}) => {
+
+    const toTheTop = () => {
+        window.scrollTo({top:0, left:0, behavior:'smooth'})
+    }
+
     return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light  menu">
+    <nav className={`navbar navbar-expand-lg menu ${isScrolling > 20 ? 'scrolling' : null}`}>
         <div className="container-fluid">
-        <Link to="/" className="navbar-brand"><img src={require('../Assets/logo.png')} className="imgNavbar"/></Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+        <Link to="/" className="navbar-brand"><button onClick={toTheTop}>logo</button></Link>
+            <button className="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style={{color:'white'}}>
+            <span className="navbar-toggler-icon" style={{color:'white'}}></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav mx-auto">

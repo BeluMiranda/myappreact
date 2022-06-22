@@ -8,6 +8,7 @@ const Item = ({shoee}) => {
    const {nombre, photo, price, id} = shoee
     return (
         <>
+      
         {<div className="body">
           <div className="producto">
             <img src={photo} alt=""/>
@@ -27,7 +28,7 @@ const Item = ({shoee}) => {
                     </span>
                    
                 </div>
-                <Link to={'/item/'+id}><button className="shop">Shop</button></Link>
+                <Link to={`/item/${id}`}><button className="shop">Shop</button></Link>
             </div>
           </div>
     </div>}
