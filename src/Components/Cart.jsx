@@ -1,56 +1,74 @@
 import React, { useContext } from 'react';
-
+import { Link } from 'react-router-dom';
 
 import { CartContext } from "../Context/CartContext"
 
 
 
 const Cart = () => {
-    const {cart, deleteItem, getItemQty, getItemPrice} = useContext(CartContext)
-    
+    const {cart, removeFromCart, getItemQty, getItemPrice, emptyCart} = useContext(CartContext)
+    const carritoVacio = cart.length === 0;
     return (
         <>
         <h2 class="section-header">CART</h2>
+        <h2 className="carttitle">Mi Carrito</h2>
     
-
-    {cart.map(product => ( 
-    
-    <section class="container content-section">
-    
-    <div class="cart-row">
-        <span class="cart-item cart-header cart-column">Product</span>
-        <span class="cart-price cart-header cart-column">Price</span>
-        <span class="cart-quantity cart-header cart-column">Quantity</span>
-    </div>
-    <div class="cart-items">
-        <div class="cart-row">
-            <div class="cart-item cart-column">
-                <img class="cart-item-image" src={product.photo1} width="100" height="100"/>
-                <span class="cart-item-title">{product.nombre}</span>
+        {(carritoVacio &&
+            <div className='emptyCart'>
+                <h4>EMPTY CART</h4>
+            <Link to="/"><button className='btnGo'>GO TO SHOP</button></Link> 
             </div>
-            <span class="cart-price cart-column">${product.price}</span>
-            <div class="cart-quantity cart-column">
-                
-                <button class="btn btn-danger" type="button" >button</button>
-            </div>
-        </div>
-    </div>
-        </section>
+        ) || 
+        <div className="cartt">
+        <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Delete</th>
+        </tr>
+      </thead> 
+      <tbody>{
+        cart.map(product => (
+          <tr className="cart-item" key={product.id}>
+            <td className="cart-item-img">
+              <img src={product.photo1} alt={product.nombre} width="100" height="100"/>
+            </td>
+            <td className="cart-item-title">
+              {product.nombre}
+            </td>
+            <td className="cart-item-price">${product.price}</td>
+            <td className="cart-item-qty">
+              {product.cantidad}
+            </td>
+            <td className="cart-item-total">
+              ${product.price * product.cantidad}
+            </td>
+            <td className="cart-item-remove">
+              <button className="botonPrincipal" onClick={() => removeFromCart(product.id)}>
+                X
+              </button>
+            </td>
+          </tr>
         ))}
-
-        <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">${getItemPrice()}</span>
-            </div>
-
-          {/*<p>PRODUCTOS TOTALES: {getItemQty()}</p>
-          <p>TOTAL A PAGAR: ${getItemPrice()}</p>*/}
-
-
-        <button className='btnAddCar'>Finalizar Compra</button>
-        <button className='btnAddCar'>Seguir Comprando</button>
-      
-
+      </tbody>
+    </table>
+        
+    <div className="cart-footer">
+      {carritoVacio?
+          <Link to="/"><button className="botonPrincipal">Volver al inicio</button></Link>
+          :
+          <>
+          <h3>total: ${getItemPrice()}</h3>
+          <Link to="/cart"><button className="botonPrincipal">Continuar al Pago</button></Link>
+          <button className="botonPrincipal" onClick={emptyCart}>Vaciar Carrito</button>
+          </>
+      }
+    </div>
+    </div>     } 
      </>
     )
 }

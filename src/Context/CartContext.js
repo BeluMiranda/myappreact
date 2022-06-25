@@ -37,8 +37,9 @@ const MyProvider = ({children}) => {
     }
 
     // Cart - Se va a encargar de eliminar el producto seleccionado del carrito.
-    const deleteItem = (id) => {
-        return setCart(cart.filter(item => item.id !== id))
+    const removeFromCart = (id) => {
+        const newCart = cart.filter(item => item.id !== id);
+        setCart(newCart);
     }
 
     // Cart - Reduce - Retorna la totalidad de unidades de nuestro carrito.
@@ -52,7 +53,7 @@ const MyProvider = ({children}) => {
     }
 
 
-    return <Provider value={{cart, isInCart, addItem, deleteItem, emptyCart, getItemPrice, getItemQty}} >{children}</Provider>
+    return <Provider value={{cart, isInCart, addItem, removeFromCart, emptyCart, getItemPrice, getItemQty}} >{children}</Provider>
 }
 
 export default MyProvider
