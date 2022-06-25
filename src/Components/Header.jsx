@@ -14,7 +14,7 @@ const Header = () => {
         
         <div className='cover-container'>
            <video src={shoes} autoPlay loop muted className='video'/>
-          
+            <h4 className='justdoit'>JUST DO IT</h4>
            <motion.main>
            <Link to="/productos">
                         <motion.button
@@ -38,6 +38,7 @@ const Header = () => {
            </div>
            <div className='containerIntro'>
            <h4 className="intro">INTRODUCING PEG 39</h4>
+           <p className="runTxt">Runnin's most legendary name returns, even than before</p>
            </div>
         </>
     );

@@ -10,7 +10,7 @@ const Cart = () => {
     const carritoVacio = cart.length === 0;
     return (
         <>
-        <h2 class="section-header">CART</h2>
+        
         <h2 className="carttitle">Mi Carrito</h2>
     
         {(carritoVacio &&

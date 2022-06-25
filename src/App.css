@@ -281,8 +281,6 @@ body::-webkit-scrollbar-track {
   justify-content: center;
   align-items: center;
   box-shadow:inset 0 0 0 1000px rgba(0, 0, 0, 0.408);
-  margin-left: 48px;
-  margin-right: 48px;
 }
 .video{
   object-fit: cover;
@@ -437,13 +435,12 @@ table, th, td {
     align-items: center;
     justify-content: center;
     color: #4e0144;
+    margin-top: 100px;
 }
 .carttitle {
     font-size: 2rem;
     color: #000000;
     text-align: center;
-    
-    margin: 60px;
 }
 .empty-cart {
   padding: 20px;
@@ -495,6 +492,10 @@ background-color: rgb(150, 150, 150, 0.8);
   flex-direction: column;
   align-items: center;
   align-content: center;
+  margin-top: 100px;
+}
+.botonPrincipal{
+  cursor: pointer;
 }
 .nav-logo{
   cursor: pointer;
@@ -504,4 +505,8 @@ background-color: rgb(150, 150, 150, 0.8);
   align-items: center;
   text-align: center;
 }
-
+.classItemList{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
