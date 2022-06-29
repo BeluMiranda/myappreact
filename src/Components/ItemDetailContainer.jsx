@@ -1,30 +1,28 @@
 import React, { useEffect, useState } from 'react';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom';
 
 
 function ItemDetailContainer() {
-	const [itemDet, itemDetailId] = useState()
+	const [itemDet, setItemDetail] = useState({})
   	{/*const [loading, setLoading] = useState(true);
   	const [error, setError] = useState(false);/*/}
 	const {id} = useParams();
   
 	
 
-	useEffect(() => {
-		fetch('../../products.json'
-            , 
-        )
-            .then((response) => response.json())
-            .then((data) => {itemDetailId(data.filter(prod => prod.id == id))})
-            .catch((e) => {
-                console.log("salio mal")
-            })
-            .finally(() => {
-                console.log("fin")
-            })
-    }, [id])
-	
+  useEffect(()=>{
+    const db = getFirestore(); // obtenemos la base de datos
+
+    const productRef = doc(db, "products", id); // obtenemos el documento
+
+    getDoc(productRef)
+        .then((snapshot) =>{
+          setItemDetail({...snapshot.data(), id: snapshot.id}); // seteamos el estado
+    })
+
+}, [id]); // solo se ejecuta cuando el id cambie
 	
 
 	return (
@@ -36,7 +34,7 @@ function ItemDetailContainer() {
             <div className="spinner-border text-dark bg-gradient" role="status"></div>
             </div>
 	:*/}
-             {itemDet && <ItemDetail itemDet={itemDet} />}
+                {itemDet && <ItemDetail itemDet={itemDet} />}
         </>
     )
 }

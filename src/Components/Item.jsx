@@ -5,13 +5,13 @@ import{faStar} from "@fortawesome/free-solid-svg-icons"
 import { Link } from 'react-router-dom';
 
 const Item = ({shoee}) => {
-   const {nombre, photo, price, id} = shoee
+   const {nombre, photo1, price, id} = shoee
     return (
         <>
       
         {<div className="body">
           <div className="producto">
-            <img src={photo} alt=""/>
+            <img src={photo1} alt=""/>
             <div className="informacion">
                 <span className="tipoenvio">Envio con normalidad</span>
                 <span className="precio">${price}</span>

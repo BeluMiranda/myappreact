@@ -10,7 +10,7 @@ const MyProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
     // ItemDetail - Se va a encargar de agregar el producto seleccionado al carrito.
-    const addItem = ([item], cantidad) => {
+    const addItem = (item, cantidad) => {
         
         const newItem = {...item, cantidad}
 
