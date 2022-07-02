@@ -6,7 +6,7 @@ import { CartContext } from "../Context/CartContext"
 
 
 const Cart = () => {
-    const {cart, removeFromCart, getItemQty, getItemPrice, emptyCart} = useContext(CartContext)
+    const {cart, emptyCart, getCartTotal, removeFromCart} = useContext(CartContext)
     const carritoVacio = cart.length === 0;
     return (
         <>
@@ -45,7 +45,7 @@ const Cart = () => {
               {product.cantidad}
             </td>
             <td className="cart-item-total">
-              ${product.price * product.cantidad}
+              ${getCartTotal()}
             </td>
             <td className="cart-item-remove">
               <button className="botonPrincipal" onClick={() => removeFromCart(product.id)}>
@@ -62,8 +62,8 @@ const Cart = () => {
           <Link to="/"><button className="botonPrincipal">Volver al inicio</button></Link>
           :
           <>
-          <h3>total: ${getItemPrice()}</h3>
-          <Link to="/cart"><button className="botonPrincipal">Continuar al Pago</button></Link>
+          <h3>total: ${getCartTotal()}</h3>
+          <Link to="/checkout"><button className="botonPrincipal">Continuar al Pago</button></Link>
           <button className="botonPrincipal" onClick={emptyCart}>Vaciar Carrito</button>
           </>
       }

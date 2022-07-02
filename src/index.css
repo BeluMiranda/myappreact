@@ -5,9 +5,6 @@
   font-family: 'Poppins', sans-serif;
   letter-spacing: 3px;
 }
-
-
-
 .cover-container{
   width: 100%;
   height: 100vh;
@@ -18,6 +15,7 @@
   align-items: center;
   box-shadow:inset 0 0 0 1000px rgba(0, 0, 0, 0.408);
   text-align: center;
+  max-width: 100%;
   
 }
 .video{
@@ -26,6 +24,7 @@
   height: 100vh;
   position: absolute;
   z-index: -1;
+  max-width: 100%;
 }
 .intro{
   font-size: 72px;
@@ -44,4 +43,47 @@
   font-size: 15px;
   font-weight: lighter;
   
+}
+.peg39{
+  width: 100%;
+  height: 50em;
+}
+.imgPeg39{
+  object-fit: cover;
+  width: 90em;
+  max-width: 100%;
+}
+.checkoutBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.checkoutBody input {
+  padding: 0.2em;
+  margin: 10px;
+  border: 2px solid purple;
+  border-radius: 5px;
+}
+.checkoutBody p {
+  font-size: 0.8em;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.checkoutBody h1 {
+  font-size: 3em;
+  text-align: center;
+  padding-bottom: 15px;
+  margin-top: 2em;
+}
+.sentOrder {
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.orderId {
+  background: black;
+  color: white;
 }

@@ -15,6 +15,7 @@ function NavBar({ isScrolling }) {
       <div className={`Navbar navbar-expand-lg menu ${isScrolling > 20 ? 'scrolling' : null}`}> 
         <Link to="/" className="nav-logo"><img src={logo} className="nav-logo" type="button" onClick={toTheTop} /></Link>
         <div className={`nav-items ${isOpen && "open"}`}>
+        <Link to="/products">PRODUCTS</Link>
           <Link to="/category/men">MEN</Link>
           <Link to="/category/women">WOMEN</Link>
           

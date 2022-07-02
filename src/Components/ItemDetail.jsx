@@ -24,35 +24,33 @@ const notify = () => {
 function ItemDetail({itemDet}) {
     const {id, photo1, photo2, photo3, photo4, nombre, description, price, category, stock} = itemDet
 
-    const {isInCart, addItem} = useContext(CartContext)
-
-
-    const [cantidad, setCantidad] = useState(1)
-    const [stockArticulos, setStock] = useState(stock)
-    const [articulosAgregados, setArtAdd] = useState(0)
-
-
-    function onAdd(){
-        if (stockArticulos - cantidad >= 0) {
-            setArtAdd(cantidad)
-            addItem(itemDet, cantidad)
-      
-            //controlamos la cantidad de articulos agregados
-            setStock(stockArticulos - cantidad)
-        }else{
-            alert("No hay stock, quedan "+ stock +" unidades")
-        }
-        
+    const { isInCart, addToCart } = useContext(CartContext);
+    const [cant, setCant] = useState(0);
+  
+  
+    //FUNCIONES DE ITEM COUNT
+    const [count, setCount] = useState(1)
+  
+    const sumar = () => {
+      count < stock ? setCount(count + 1) : alert('supero stock')
     }
-    
-    function restar(){
-      {cantidad > 1 && setCantidad(cantidad - 1)}
+    const restar = () => {
+      count > 1 ? setCount(count - 1) : alert('La cantidad no puede ser menor que 1')
     }
-    
-    function sumar(){
-      {cantidad < stock && setCantidad(cantidad + 1)}
+    const reset = () => {
+      setCount(1)
     }
-    
+  
+    const agregar = (count) => {
+      if (count === 1) {
+        alert('se agrego un producto')
+      } else {	
+      alert(`Se agregaron ${count} ${nombre} al carrito.`);
+      }
+      setCant(count);
+      addToCart(itemDet, count, id);
+      isInCart(id);
+    }
     
 	return (
         <>
@@ -76,17 +74,18 @@ function ItemDetail({itemDet}) {
             
             <h4>{nombre}</h4><div className="bar"></div>
             <h2>${price}</h2>
-            <span>{description}</span>
-        
-
-        {articulosAgregados === 0 &&
-          <ItemCount stock={stock} initial={1} onAdd={onAdd} restar={restar} sumar={sumar} cantSelect={cantidad} />}
-
-        {articulosAgregados > 0 && <Link className='btnAddCar' to={`/cart`}>FINALIZAR COMPRA</Link>}
+            {cant > 0 ? 
+              <>
+                <Link to={'/'}><button className="botonPrincipal">Seguir comprando</button></Link>
+                <Link to={'/cart'}><button className="botonPrincipal">Terminar mi compra</button></Link>
+                </>
+                 : 
+                <ItemCount stock={stock} initial={1} onAdd={agregar} sumar={sumar} restar={restar} reset={reset} count={count} />
+                }
             </div>
           </div>
     </>	
 	)
 
-}
+ }
 export default ItemDetail

@@ -6,13 +6,16 @@ import { CartContext } from "../Context/CartContext"
 
 
 const CartWidget = () => {
-    const {getItemQty} = useContext(CartContext)
+    const {getItemQuantity} = useContext(CartContext)
 
     return (
         <>
        
         {<FontAwesomeIcon icon={faCartFlatbedSuitcase}  style={{width:"40px", height:"20px"}}/> }
-          <span className='numberPadre'><span className='numberHijo'>{getItemQty()}</span></span>
+        {getItemQuantity() > 0 ?
+            <span className='numberPadre'><span className='numberHijo'>{getItemQuantity()}</span></span>
+          : 
+          null}
         </>
     )
 }
