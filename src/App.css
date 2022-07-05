@@ -267,7 +267,6 @@ body::-webkit-scrollbar-track {
   height: 51px;
   border: 1px solid transparent;
   margin-top: 20px;
-  margin-left: -12px;
 }
 .h2{
  margin: auto;

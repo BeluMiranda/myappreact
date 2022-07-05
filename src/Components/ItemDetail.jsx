@@ -55,11 +55,41 @@ function ItemDetail({itemDet}) {
 	return (
         <>
         <ToastContainer />
-          <div id="prodetails" className="section-p1">
-            <div className="single-pro-imagen">
-                <img className="ft" src={photo1} alt={nombre} id="mainImage" style={{width:"500px"}}/>
-                <div className="small-image-group">
+          <div className="small-container single-product">
+            <div className="row">
+              <div className="col-2">
+                <img src={photo1} alt={nombre}  style={{width:"100%"}}/>
+                <div className="small-img-row">
+                <div className="small-img-col">
+                        <img src={photo2} style={{width:"100%"}} className="small-img" />
+                    </div>
                     <div className="small-img-col">
+                        <img src={photo3} style={{width:"100%"}} className="small-img" />
+                    </div>
+                    <div className="small-img-col">
+                        <img src={photo4} style={{width:"100%"}} className="small-img" />
+                    </div>
+                </div>
+                </div>
+              
+                <div className="col-2">
+                  <h4 className="nombreDetail">{nombre}</h4>
+                  <p className="parrafoDetail">{description}</p>
+                  <h2>${price}</h2>
+                  
+                  {cant > 0 ? 
+              <>
+                <Link to={'/'}><button className="botonPrincipal">Seguir comprando</button></Link>
+                <Link to={'/cart'}><button className="botonPrincipal">Terminar mi compra</button></Link>
+                </>
+                 : 
+                <ItemCount stock={stock} initial={1} onAdd={agregar} sumar={sumar} restar={restar} reset={reset} count={count} />
+                }
+              </div>
+              </div>
+            </div>
+          
+                   {/*} <div className="small-img-col">
                         <img src={photo2} style={{width:"30%"}} className="small-img" />
                     </div>
                     <div className="small-img-col">
@@ -69,21 +99,12 @@ function ItemDetail({itemDet}) {
                         <img src={photo4} style={{width:"30%"}} className="small-img" />
                     </div>
                 </div>
-            </div>
-            <div className="single-pro-details">
             
-            <h4>{nombre}</h4><div className="bar"></div>
-            <h2>${price}</h2>
-            {cant > 0 ? 
-              <>
-                <Link to={'/'}><button className="botonPrincipal">Seguir comprando</button></Link>
-                <Link to={'/cart'}><button className="botonPrincipal">Terminar mi compra</button></Link>
-                </>
-                 : 
-                <ItemCount stock={stock} initial={1} onAdd={agregar} sumar={sumar} restar={restar} reset={reset} count={count} />
-                }
-            </div>
-          </div>
+  <div className="single-pro-details">*/}
+            
+            
+            
+          
     </>	
 	)
 

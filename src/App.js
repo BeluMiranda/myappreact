@@ -9,6 +9,7 @@ import ItemListContainer from './Components/ItemListContainer';
 import Cart from './Components/Cart';
 import MyProvider from './Context/CartContext';
 import Checkout from './Components/Checkout';
+import Footer from './Components/Footer';
 
 
 
@@ -27,7 +28,6 @@ function App() {
        <BrowserRouter>
        <MyProvider>
        <NavBar isScrolling={scrollHeight}/>
-       
        <Routes classname="app">
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<ItemListContainer />} />
@@ -36,6 +36,7 @@ function App() {
         <Route path='/item/:id' element={<ItemDetailContainer />} />
         <Route path='/checkout' element={<Checkout />} />
         </Routes>
+        <Footer />
         </MyProvider>
         </BrowserRouter> 
         
