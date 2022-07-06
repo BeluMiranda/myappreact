@@ -13,7 +13,7 @@ const Header = () => {
         <>
         
         <div className='cover-container'>
-           <video src={shoes} autoPlay loop muted className='video'/>
+           <video src={shoes} autoPlay loop muted playsInline className='video' />
             <h4 className='justdoit'>JUST DO IT</h4>
             <motion.main>
            <Link to="/products">
