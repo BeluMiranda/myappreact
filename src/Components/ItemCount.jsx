@@ -32,17 +32,12 @@ const ItemCount = ({stock, sumar, restar, onAdd, count, initial, reset}) => {
             <button className="button" style={{width: "100px", height: "50px", }} onClick={sumar}
             > +
             </button>
-            
             </div> 
             <div className="add">
-            
-            </div>
             <button className="botonPrincipal" onClick={() => {onAdd(count); reset()}}>Agregar</button>
+            </div>
             </div> 
             
-        
-      
-      
         
         </>
     );

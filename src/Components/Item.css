@@ -23,6 +23,7 @@
     padding: 1em;
     display: flex;
     flex-flow: column;
+    align-items: center;
 }
 .informacion * + * {
     margin-bottom: 0.5em;
@@ -80,6 +81,7 @@
     border-radius: 30px;
     padding: 6px 20px;
     border: 1.5px solid transparent;
+    cursor: pointer;
 }
 .shop:hover{
     background-color: rgb(150, 150, 150, 0.8);

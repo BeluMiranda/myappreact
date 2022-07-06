@@ -188,6 +188,11 @@ body::-webkit-scrollbar-track {
 .button{
   color: rgb(27, 30, 29);
   border: 1px solid rgb(24, 22, 22);
+  margin: auto;
+  border-radius: 30px;
+  padding: 6px 20px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
 }
 .cardd{
   background-color: rgb(26, 30, 33);
@@ -320,6 +325,16 @@ body::-webkit-scrollbar-track {
 .scrolling{
   background: rgb(0, 0, 0);
   transition: all 0.5 ease;
+}
+.BtnShop{
+  margin: auto;
+  border-radius: 30px;
+  padding: 6px 20px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+}
+.BtnShop:hover{
+  background-color: rgb(150, 150, 150, 0.8);
 }
 /*CART*/
 .cart-header {
@@ -495,6 +510,16 @@ background-color: rgb(150, 150, 150, 0.8);
 }
 .botonPrincipal{
   cursor: pointer;
+  margin: auto;
+  border-radius: 30px;
+  padding: 6px 20px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  margin-left: 19%;
+  margin-top: 10px;
+}
+.add{
+  align-items: center;
 }
 .nav-logo{
   cursor: pointer;

@@ -30,15 +30,7 @@
     font-size: 22px;
     font-weight: bold;
 }
-.botonPrincipal{
-    
-    padding-left: 10px;
-    margin-right: 10px;
-    border: 1px solid #ff532b;
-}
-.botonPrincipal:focus{
-    outline: auto;
-}
+
 .small-img-row{
     display: flex;
     justify-content: space-between;

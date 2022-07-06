@@ -43,7 +43,7 @@ function ItemDetail({itemDet}) {
   
     const agregar = (count) => {
       if (count === 1) {
-        alert('se agrego un producto')
+        notify()
       } else {	
       alert(`Se agregaron ${count} ${nombre} al carrito.`);
       }

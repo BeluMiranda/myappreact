@@ -1,7 +1,7 @@
 import React from 'react';
 import shoes from '../Assets/shoes.mp4'
 import {Link} from 'react-router-dom'
-import { motion} from "framer-motion/dist/framer-motion"
+import { motion} from "framer-motion"
 import peg from '../Assets/peg39'
 const Header = () => {
 
@@ -30,7 +30,7 @@ const Header = () => {
 
                             }}
 
-                            className="text-xl [background-color:#4a3933] [color:#ebecee] w-max my-4 rounded-lg font-bold p-2 btnHeader" onClick={toTheBottom}>
+                            className="btnHeader" onClick={toTheBottom}>
                             SHOP
                         </motion.button>
                     </Link>
@@ -39,7 +39,7 @@ const Header = () => {
            <div className='containerIntro'>
            <h4 className="intro">INTRODUCING PEG 39</h4>
            <p className="runTxt">Runnin's most legendary name returns, even than before</p>
-           <Link to='/products'><button>SHOP</button></Link>
+           <Link to='/products'><button className="BtnShop">SHOP</button></Link>
            <div className='peg39'>
                             <img className='imgPeg39' src={peg}/>
            </div>
