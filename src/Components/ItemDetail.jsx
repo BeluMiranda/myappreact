@@ -58,10 +58,10 @@ function ItemDetail({itemDet}) {
           <div className="small-container single-product">
             <div className="row">
               <div className="col-2">
-                <img src={photo1} alt={nombre}  style={{width:"100%"}}/>
+                <img src={photo1} alt={nombre}  style={{width:"100%"}} id="productImg"/>
                 <div className="small-img-row">
                 <div className="small-img-col">
-                        <img src={photo2} style={{width:"100%"}} className="small-img" />
+                        <img src={photo2} style={{width:"100%"}} className="small-img"/>
                     </div>
                     <div className="small-img-col">
                         <img src={photo3} style={{width:"100%"}} className="small-img" />
@@ -88,22 +88,6 @@ function ItemDetail({itemDet}) {
               </div>
               </div>
             </div>
-          
-                   {/*} <div className="small-img-col">
-                        <img src={photo2} style={{width:"30%"}} className="small-img" />
-                    </div>
-                    <div className="small-img-col">
-                        <img src={photo3} style={{width:"30%"}} className="small-img" />
-                    </div>
-                    <div className="small-img-col">
-                        <img src={photo4} style={{width:"30%"}} className="small-img" />
-                    </div>
-                </div>
-            
-  <div className="single-pro-details">*/}
-            
-            
-            
           
     </>	
 	)
