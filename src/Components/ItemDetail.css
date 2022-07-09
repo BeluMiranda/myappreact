@@ -85,6 +85,15 @@
 }
 .footer h3{
     margin-bottom: 20px;
+    color: white;
+}
+.footer h3 a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-col-3 a:hover{
+    text-decoration: underline;
 }
 .footer-col-1 .footer-col-2 .footer-col-3{
     min-width: 250px;

@@ -1,10 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import React from "react";
 export const CartContext = createContext()
 const {Provider} = CartContext;
 const MyProvider = ({children}) => {
     
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('detail')) ?? [])
 
     //Is in cart determina si el producto a agregar ya está en el carrito o no
     const isInCart = (id) => {
@@ -50,7 +50,9 @@ const MyProvider = ({children}) => {
     const getCartTotal = () => {
         return cart.reduce((acc, x) => (acc += x.price * x.count) , 0)
     }
-
+    useEffect(() => {
+        localStorage.setItem("detail", JSON.stringify(cart));
+      }, [cart]); 
     
     return <Provider value={{
         cart,

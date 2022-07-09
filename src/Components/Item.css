@@ -11,6 +11,30 @@
     transition-duration: 0.3s;
     margin: 3em;
 }
+
+@media screen and (max-width: 753px){
+    .producto{
+        margin-right: 2em;
+      }
+      .classItemList{
+        align-items: center;
+        flex-direction: column;
+        
+    }
+}
+@media screen and (max-width: 700px){
+    .producto{
+      margin: auto;
+      display: flex;
+      flex-wrap: nowrap;
+      margin-top: 50px;
+    }
+    .classItemList{
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
 .producto:hover{
     box-shadow: 0 0 1.5em rgb(0, 0, 0, 0.2);
 }

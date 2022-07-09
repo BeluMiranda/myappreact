@@ -17,8 +17,7 @@ const Footer = () => {
                             <p></p>
                         </div>
                         <div className='footer-col-3'>
-                            <h3>By Belén Miranda</h3>
-                            <p></p>
+                            <h3><a href='https://www.linkedin.com/in/belen--miranda/'>By Belén Miranda</a></h3>
                         </div>
                     </div>
                 </div>

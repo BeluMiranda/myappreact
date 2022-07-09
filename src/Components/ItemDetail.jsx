@@ -20,6 +20,7 @@ const notify = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
+        width: '10px'
         });
 }
 const showAlert = () => {
@@ -101,7 +102,7 @@ function ItemDetail({itemDet}) {
                   
                   {cant > 0 ? 
               <>
-                <Link to={'/'}><button className="botonPrincipal">Seguir comprando</button></Link>
+                <Link to={'/products'}><button className="botonPrincipal">Seguir comprando</button></Link>
                 <Link to={'/cart'}><button className="botonPrincipal">Terminar mi compra</button></Link>
                 </>
                  : 
