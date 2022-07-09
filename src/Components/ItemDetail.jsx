@@ -8,6 +8,8 @@ import { useState } from "react"
 import { CartContext } from "../Context/CartContext"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2'
+import { icon } from "@fortawesome/fontawesome-svg-core"
 
 const notify = () => {
     toast('Add to cart 😄', {
@@ -20,6 +22,15 @@ const notify = () => {
         progress: undefined,
         });
 }
+const showAlert = () => {
+  Swal.fire({
+          icon: 'error',
+          text: 'NO MORE STOCK',
+          width: '20rem',
+          toast: 'true',
+          position:'top-end'
+  })
+}
 
 function ItemDetail({itemDet}) {
     const {id, photo1, photo2, photo3, photo4, nombre, description, price, category, stock} = itemDet
@@ -27,15 +38,14 @@ function ItemDetail({itemDet}) {
     const { isInCart, addToCart } = useContext(CartContext);
     const [cant, setCant] = useState(0);
   
-  
     //FUNCIONES DE ITEM COUNT
     const [count, setCount] = useState(1)
   
     const sumar = () => {
-      count < stock ? setCount(count + 1) : alert('supero stock')
+      count < stock ? setCount(count + 1) : showAlert()
     }
     const restar = () => {
-      count > 1 ? setCount(count - 1) : alert('La cantidad no puede ser menor que 1')
+      count > 1 ? setCount(count - 1) : console.log('dont')
     }
     const reset = () => {
       setCount(1)
@@ -45,20 +55,22 @@ function ItemDetail({itemDet}) {
       if (count === 1) {
         notify()
       } else {	
-      alert(`Se agregaron ${count} ${nombre} al carrito.`);
+      notify()
       }
       setCant(count);
       addToCart(itemDet, count, id);
       isInCart(id);
     }
     
+
 	return (
+   
         <>
         <ToastContainer />
           <div className="small-container single-product">
             <div className="row">
               <div className="col-2">
-                <img src={photo1} alt={nombre}  style={{width:"100%"}} id="productImg"/>
+                <img src={photo1} alt={nombre}  style={{width:"100%"}} id="productImg" className=""/>
                 <div className="small-img-row">
                 <div className="small-img-col">
                         <img src={photo2} style={{width:"100%"}} className="small-img"/>
@@ -90,7 +102,8 @@ function ItemDetail({itemDet}) {
             </div>
           
     </>	
-	)
+    )
+	
 
  }
 export default ItemDetail

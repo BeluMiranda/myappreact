@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom';
-
+import ClipLoader from "react-spinners/ClipLoader";
 
 function ItemDetailContainer() {
 	const [itemDet, setItemDetail] = useState({})
-  	{/*const [loading, setLoading] = useState(true);
-  	const [error, setError] = useState(false);/*/}
+  	const [loading, setLoading] = useState(true);
+  	const [error, setError] = useState(false);
 	const {id} = useParams();
   
 	
@@ -20,6 +20,8 @@ function ItemDetailContainer() {
     getDoc(productRef)
         .then((snapshot) =>{
           setItemDetail({...snapshot.data(), id: snapshot.id}); // seteamos el estado
+    }).finally(()=>{
+      setLoading(false)
     })
 
 }, [id]); // solo se ejecuta cuando el id cambie
@@ -27,14 +29,14 @@ function ItemDetailContainer() {
 
 	return (
         <>
-			 {/*
+			 {
             loading ?
-            <div className="d-flex align-items-center justify-content-center">
-                <span className="me-4">Loading shoes...</span>
-            <div className="spinner-border text-dark bg-gradient" role="status"></div>
-            </div>
-	:*/}
-                {itemDet && <ItemDetail itemDet={itemDet} />}
+            <div className='loader'>
+          <ClipLoader color={'black'} loading={loading} size={50} className='loader'/>
+          </div>
+            
+	            :
+                itemDet && <ItemDetail itemDet={itemDet} />}
         </>
     )
 }

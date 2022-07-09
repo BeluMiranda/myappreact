@@ -23,17 +23,9 @@ function App() {
     window.addEventListener("scroll", handleScroll)
   }, [scrollHeight])
 
-  const [loading, setLoading] = useState(true);
-  const spinner = document.getElementById("spinner");
-  if (spinner) {
-    setTimeout(() => {
-      spinner.style.display = "none";
-      setLoading(false);
-    }, 2500);
-  }
   return (
   
-        !loading && (
+       <>
        <BrowserRouter>
        <MyProvider>
        <NavBar isScrolling={scrollHeight}/>
@@ -48,8 +40,8 @@ function App() {
         <Footer />
         </MyProvider>
         </BrowserRouter> 
-         )
-  
+         
+        </>
   );
 }
 export default App

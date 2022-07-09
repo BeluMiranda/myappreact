@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getFirestore, getDocs, collection, query, where, getDoc, doc } from 'firebase/firestore'
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
+import ClipLoader from "react-spinners/ClipLoader";
 
 const ItemListContainer = () => {
     const {id} = useParams()
@@ -41,22 +42,24 @@ const ItemListContainer = () => {
         }
         
       }, [id]);
+
+      
     return (
-        <>
         
-        {
-            loading ?
-            <div className="d-flex align-items-center justify-content-center">
-                <span className="me-4">Loading shoes...</span>
-            <div className="spinner-border text-dark bg-gradient" role="status"></div>
-            </div>
-            :
-            <ItemList
-              shoes={shoes} />
-              
+      <>
+        
+      {
+          loading ?
+          <div className='loader'>
+          <ClipLoader color={'black'} loading={loading} size={50} className='loader'/>
+          </div>
+          :
+          <ItemList
+            shoes={shoes} />
             
-        }
-        </>
+          
+      }
+      </>
     );
 }
 

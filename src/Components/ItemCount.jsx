@@ -26,7 +26,7 @@ const ItemCount = ({stock, sumar, restar, onAdd, count, initial, reset}) => {
         <>
             <div>
             <div className='groupBottons'>
-            <button className="button" style={{width: "100px", height: "50px" }} onClick={restar}> -
+            <button className="button" style={{width: "100px", height: "50px" }} onClick= {restar}> -
             </button>
             <h2 className='h2'>{count}</h2> 
             <button className="button" style={{width: "100px", height: "50px", }} onClick={sumar}

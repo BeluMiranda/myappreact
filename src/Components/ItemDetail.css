@@ -67,6 +67,9 @@
         height: auto;
         margin-top: 0;
     }
+    .photo1{
+        margin-top: 90px;
+    }
 }
 .footer{
     background-color: black;
