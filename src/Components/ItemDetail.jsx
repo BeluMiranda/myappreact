@@ -13,7 +13,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core"
 
 const notify = () => {
     toast('Add to cart 😄', {
-        position: "bottom-right",
+        position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -24,11 +24,21 @@ const notify = () => {
 }
 const showAlert = () => {
   Swal.fire({
-          icon: 'error',
+    backdrop: `
+    rgba(0,0,0,0.4)
+    no-repeat
+  `, 
           text: 'NO MORE STOCK',
-          width: '20rem',
-          toast: 'true',
-          position:'top-end'
+          width:'20rem',
+          confirmButtonColor: '#000000',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          },
+          position: 'top-center'
+         
   })
 }
 
