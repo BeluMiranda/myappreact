@@ -439,17 +439,35 @@ body::-webkit-scrollbar-track {
   font-size: 1.75em;
 }
 /*/cart*/
-table, th, td {
-    border: 1px solid #ccc;
+table{
+  border-collapse: collapse;
+  width: 70%;
+  text-align: center;
+  color: #000000;
+}
+th, td {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 2px;
+    padding: 10px;
+}
+thead{
+  background:#aeaeae;
+}
+table tbody tr:hover{
+  background: rgb(0, 0, 0, 0.2);
 }
 
 .cartt {
+  width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #4e0144;
+    height: 60vh;
+    max-width: 1000px;
+    margin: auto;
     margin-top: 100px;
+
 }
 .carttitle {
     font-size: 2rem;
@@ -469,13 +487,11 @@ table, th, td {
 .cart-item-title {
   width: 50%;
 }
-table, th, td {
-  border: 1px solid #ccc;
-}
 .cart-footer {
   margin-top: 30px;
   text-align: center;
 }
+
 .btnGo{
   color: black;
   padding: 3px;
@@ -518,6 +534,9 @@ background-color: rgb(150, 150, 150, 0.8);
   margin-left: 19%;
   margin-top: 10px;
 }
+.botonnPrincipal{
+  cursor: pointer;
+}
 .add{
   align-items: center;
 }
@@ -534,7 +553,25 @@ background-color: rgb(150, 150, 150, 0.8);
   flex-direction: row;
   flex-wrap: wrap;
 }
+.table{
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .table{
+    border: 0px;
+  }   
+  .table{
+    font-size: 10px;
+  } 
+  .table tr{
+    margin-bottom: 8px;
+    border-radius: 4px solid #ddd;
+}
+.table th, .table td{
+  font-size: 12px;
+}
 
+}
 /*loading*/
 
 .containerrr {
@@ -563,4 +600,9 @@ z-index: 1000;
     justify-content: center;
     align-items: center;
     
+}
+/*foorm*/
+.form-control:focus {
+  border-color: #e30428 !important;
+  box-shadow: 0px 0px 0px #e30428 !important;
 }

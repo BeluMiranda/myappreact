@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import{faTrash} from "@fortawesome/free-solid-svg-icons"
 import { CartContext } from "../Context/CartContext"
 
 
@@ -20,7 +21,7 @@ const Cart = () => {
             </div>
         ) || 
         <div className="cartt">
-        <table>
+        <table className="table">
       <thead>
         <tr>
           <th>Product</th>
@@ -42,15 +43,15 @@ const Cart = () => {
             </td>
             <td className="cart-item-price">${product.price}</td>
             <td className="cart-item-qty">
-              {product.cantidad}
+              {product.count}
             </td>
             <td className="cart-item-total">
               ${getCartTotal()}
             </td>
             <td className="cart-item-remove">
-              <button className="botonPrincipal" onClick={() => removeFromCart(product.id)}>
-                X
-              </button>
+             
+              <FontAwesomeIcon icon={faTrash}  style={{width:"40px", height:"20px"}} className="botonnPrincipal" onClick={() => removeFromCart(product.id)}/>
+              
             </td>
           </tr>
         ))}
@@ -68,7 +69,7 @@ const Cart = () => {
           </>
       }
     </div>
-    </div>     } 
+    </div>} 
      </>
     )
 }
