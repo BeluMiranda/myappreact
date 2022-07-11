@@ -102,8 +102,8 @@ function ItemDetail({itemDet}) {
                   
                   {cant > 0 ? 
               <>
-                <Link to={'/products'}><button className="botonPrincipal">Seguir comprando</button></Link>
-                <Link to={'/cart'}><button className="botonPrincipal">Terminar mi compra</button></Link>
+                <Link to={'/products'}><button className="botonPrincipal1">Seguir comprando</button></Link>
+                <Link to={'/cart'}><button className="botonPrincipal1">Terminar mi compra</button></Link>
                 </>
                  : 
                 <ItemCount stock={stock} initial={1} onAdd={agregar} sumar={sumar} restar={restar} reset={reset} count={count} />

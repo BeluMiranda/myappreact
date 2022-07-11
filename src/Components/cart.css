@@ -3,11 +3,15 @@
       display: none;
     }  
     .botonPrincipal{
-        margin-bottom: 8.5em;
+        margin-bottom: 11.3em;
       } 
       .cart-item{
         font-size: 12px;
       }
+      .botonPrincipal1{
+        margin: auto;
+        margin-bottom: 2px;
+      } 
   } 
   table{
     border-collapse: collapse;

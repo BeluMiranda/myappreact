@@ -67,6 +67,9 @@
         font-size: 12px;
         margin-bottom: 1em;
     }
+    .botonPrincipal1{
+        margin-bottom: auto;
+    }
     .single-product .col-2{
         height: auto;
         margin-top: 0;

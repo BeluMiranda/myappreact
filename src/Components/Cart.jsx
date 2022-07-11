@@ -11,7 +11,14 @@ const Cart = () => {
     return (
         <>
         <h2 className="cart-title">Mi Carrito</h2>
-    <div className="cart">
+    
+      {(carritoVacio &&
+            <div className='emptyCart'>
+                <h4>EMPTY CART</h4>
+            <Link to="/"><button className='btnGo'>GO TO SHOP</button></Link> 
+            </div>
+        ) || 
+        <div className="cart">
     <table>
       <thead>
         <tr>
@@ -23,13 +30,7 @@ const Cart = () => {
           <th>X</th>
         </tr>
       </thead>
-      <tbody>
-      {(carritoVacio &&
-            <div className='emptyCart'>
-                <h4>EMPTY CART</h4>
-            <Link to="/"><button className='btnGo'>GO TO SHOP</button></Link> 
-            </div>
-        ) || 
+      <tbody>{
         cart.map(product => (
           <tr className="cart-item" key={product.id}>
             <td className="cart-item-img">
@@ -62,11 +63,11 @@ const Cart = () => {
           <>
           <h3>total: ${getCartTotal()}</h3>
           <Link to="/checkout"><button className="botonPrincipal">Continuar al Pago</button></Link>
-          {/*<button className="botonPrincipal" onClick={emptyCart}>Vaciar Carrito</button>*/}
+      {/*<button className="botonPrincipal" onClick={emptyCart}>Vaciar Carrito</button>*/}
           </>
       }
     </div>
-    </div> 
+    </div> }
      </>
     )
 }
