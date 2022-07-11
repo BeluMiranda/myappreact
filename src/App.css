@@ -165,7 +165,7 @@ body::-webkit-scrollbar-track {
   opacity: .2;
 }
 }
-.cart{
+.cartt{
   margin-left: 0em;
 }
 
@@ -439,58 +439,6 @@ body::-webkit-scrollbar-track {
   font-size: 1.75em;
 }
 /*/cart*/
-table{
-  border-collapse: collapse;
-  width: 70%;
-  text-align: center;
-  color: #000000;
-}
-th, td {
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 2px;
-    padding: 10px;
-}
-thead{
-  background:#aeaeae;
-}
-table tbody tr:hover{
-  background: rgb(0, 0, 0, 0.2);
-}
-
-.cartt {
-  width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 100px;
-
-}
-.carttitle {
-    font-size: 2rem;
-    color: #000000;
-    text-align: center;
-}
-.empty-cart {
-  padding: 20px;
-}
-.cart-item {
-  width: 80%;
-}
-.cart-item-img, .cart-item-qty, .cart-item-price, .cart-item-remove, .cart-item-total {
-  width: 10%;
-  text-align: center;
-}
-.cart-item-title {
-  width: 50%;
-}
-.cart-footer {
-  margin-top: 30px;
-  text-align: center;
-}
 
 .btnGo{
   color: black;
@@ -533,6 +481,7 @@ background-color: rgb(150, 150, 150, 0.8);
   cursor: pointer;
   margin-left: 19%;
   margin-top: 10px;
+  margin-bottom: 8em;
 }
 .botonnPrincipal{
   cursor: pointer;
@@ -553,25 +502,9 @@ background-color: rgb(150, 150, 150, 0.8);
   flex-direction: row;
   flex-wrap: wrap;
 }
-.table{
-  width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .table{
-    border: 0px;
-  }   
-  .table{
-    font-size: 10px;
-  } 
-  .table tr{
-    margin-bottom: 8px;
-    border-radius: 4px solid #ddd;
-}
-.table th, .table td{
-  font-size: 12px;
-}
 
-}
+
+
 /*loading*/
 
 .containerrr {

@@ -3,36 +3,33 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import{faTrash} from "@fortawesome/free-solid-svg-icons"
 import { CartContext } from "../Context/CartContext"
-
-
+import cart from './cart.css'
 
 const Cart = () => {
     const {cart, emptyCart, getCartTotal, removeFromCart} = useContext(CartContext)
     const carritoVacio = cart.length === 0;
     return (
         <>
-        
-        <h2 className="carttitle">Mi Carrito</h2>
-    
-        {(carritoVacio &&
+        <h2 className="cart-title">Mi Carrito</h2>
+    <div className="cart">
+    <table>
+      <thead>
+        <tr>
+          <th className="header-image">Imágen</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cant</th>
+          <th>Total</th>
+          <th>X</th>
+        </tr>
+      </thead>
+      <tbody>
+      {(carritoVacio &&
             <div className='emptyCart'>
                 <h4>EMPTY CART</h4>
             <Link to="/"><button className='btnGo'>GO TO SHOP</button></Link> 
             </div>
         ) || 
-        <div className="cartt">
-        <table className="table">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
-          <th>Delete</th>
-        </tr>
-      </thead> 
-      <tbody>{
         cart.map(product => (
           <tr className="cart-item" key={product.id}>
             <td className="cart-item-img">
@@ -46,7 +43,7 @@ const Cart = () => {
               {product.count}
             </td>
             <td className="cart-item-total">
-              ${getCartTotal()}
+            ${product.price * product.count}
             </td>
             <td className="cart-item-remove">
              
@@ -65,11 +62,11 @@ const Cart = () => {
           <>
           <h3>total: ${getCartTotal()}</h3>
           <Link to="/checkout"><button className="botonPrincipal">Continuar al Pago</button></Link>
-          <button className="botonPrincipal" onClick={emptyCart}>Vaciar Carrito</button>
+          {/*<button className="botonPrincipal" onClick={emptyCart}>Vaciar Carrito</button>*/}
           </>
       }
     </div>
-    </div>} 
+    </div> 
      </>
     )
 }
