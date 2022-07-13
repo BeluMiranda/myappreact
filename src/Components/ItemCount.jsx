@@ -6,22 +6,24 @@ import {Link} from 'react-router-dom';
 import { CartContext } from "../Context/CartContext"
 
 
-const deleted = () => {
-    toast('Deteled 😭', {
-        position: "bottom-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        });
-}
+
 
 
 const ItemCount = ({stock, sumar, restar, onAdd, count, initial, reset}) => {
     const {cart, addToCart} = useContext(CartContext);
     
+    const deleted = () => {
+        if (count>1){
+        toast('Producto eliminado 😭', {
+            position: "bottom-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        })};
+    }
     return (
         <>
             <div>

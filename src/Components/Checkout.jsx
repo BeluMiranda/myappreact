@@ -45,8 +45,12 @@ const Checkout = () => {
         addDoc(orderCollection, order).then(({ id }) => {
           Swal.fire({
             position: "center",
+            width:'40rem',
+            height: '9rem',
             icon: "success",
-            iconColor: "#00A300",
+            color: "#000000",
+            fontSize: '12px',
+            iconColor: "green",
             title: `Gracias por su compra!\nTicket nº ${id}`,
             html:
               "<pre>" +
@@ -54,7 +58,7 @@ const Checkout = () => {
                 order.buyer.lastName
               }\nEmail: ${
                 order.buyer.email
-              }\n\nHa comprado con éxito  productos!` +
+              }\n\nHa comprado con éxito` +
               "</pre>",
             showConfirmButton: true,
           });
@@ -65,23 +69,16 @@ const Checkout = () => {
         emptyCart();
       };
       return (
-        <div className="col-12 col-xl-4 container py-4 p-md-4">
-          <h2 className="text-center my-4 my-md-5 main-title animate__animated animate__bounceInLeft">
+        <>
+        <div className="col-12 col-xl-4 contain py-4 p-md-4">
+          <h2 className="text-center my-4 my-md-5">
             Resumen del pedido
           </h2>
-          <div className="d-flex justify-content-between animate__animated animate__zoomInUp">
-            <p>
-              <b> PRODUCTOS</b>
-            </p>
-            <p>
-              <b>${getCartTotal()}</b>
-            </p>
-          </div>
           <div className="cart-container p-4 animate__animated animate__zoomInUp">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-1">
                 <label htmlFor="name" className="form-label">
-                  <b className="h6" style={{ color: "#565656", fontSize: ".9rem" }}>
+                  <b className="h6" style={{ color: "#000000", fontSize: ".9rem" }}>
                     NOMBRE
                   </b>
                 </label>
@@ -112,7 +109,7 @@ const Checkout = () => {
               </div>
               <div className="mb-1">
                 <label htmlFor="lastname" className="form-label">
-                  <b className="h6" style={{ color: "#565656", fontSize: ".9rem" }}>
+                  <b className="h6" style={{ color: "#000000", fontSize: ".9rem" }}>
                     APELLIDO
                   </b>
                 </label>
@@ -142,7 +139,7 @@ const Checkout = () => {
               </div>
               <div className="mb-1">
                 <label htmlFor="email" className="form-label">
-                  <b className="h6" style={{ color: "#565656", fontSize: ".9rem" }}>
+                  <b className="h6" style={{ color: "#000000", fontSize: ".9rem" }}>
                     EMAIL
                   </b>
                 </label>
@@ -172,7 +169,7 @@ const Checkout = () => {
               </div>
               <div className="mb-1">
                 <label htmlFor="phone" className="form-label">
-                  <b className="h6" style={{ color: "#565656", fontSize: ".9rem" }}>
+                  <b className="h6" style={{ color: "#000000", fontSize: ".9rem" }}>
                     TELEFONO
                   </b>
                 </label>
@@ -201,7 +198,7 @@ const Checkout = () => {
                   </h6>
                 )}
               </div>
-              <div className="d-flex justify-content-between">
+              <div className="di-flex justify-content-between">
                 <p>
                   <b>PRECIO TOTAL</b>
                 </p>
@@ -209,12 +206,13 @@ const Checkout = () => {
                   <b>${getCartTotal()}</b>
                 </p>
               </div>
-              <button className="btn btn-secondary container mb-4" type="submit">
-                Proceder con el pago
+              <button className="btn btn-secondary contain mb-4" type="submit">
+                Pagar
               </button>
             </form>
           </div>
         </div>
+        </>
       );
     };
 export default Checkout;

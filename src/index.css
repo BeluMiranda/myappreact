@@ -5,6 +5,13 @@
   font-family: 'Poppins', sans-serif;
   letter-spacing: 3px;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
 .cover-container{
   width: 100%;
   height: 100vh;
@@ -86,4 +93,105 @@
 .orderId {
   background: black;
   color: white;
+}
+/*checkout*/
+.contain{
+  width: 30%;
+  margin: auto;
+  border-radius: 15px;
+}
+@media (min-width: 768px){
+  .p-md-4{
+    padding: 1.5rem;
+  }
+}
+.di-flex{
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1200px){
+.col-xl-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    margin-bottom: 1.5em;
+}
+}
+.text-center{
+  margin-top: 5em;
+  text-align: center;
+}
+.cart-container {
+  border: 1px solid hsla(0,0%,50%,.763);
+  border-bottom: 5px solid hsla(0,0%,49%,.779);
+  border-radius: 10px;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.p-4 {
+  padding: 1.5rem!important;
+}
+.mb-1{
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.btn-secondary {
+  margin: auto;
+  border-radius: 30px;
+  padding: 6px 20px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  background-color: rgb(150, 150, 150, 0.8)
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.di-flex {
+  display: flex;
+}
+.form-control {
+  -webkit-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  color: #212529;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  width: 100%;
+}
+@media (min-width: 1400px){
+.contain, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1320px;
+}}
+@media (min-width: 1200px){
+.contain, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px;
+}}
+@media (min-width: 992px){
+.contain, .container-lg, .container-md, .container-sm {
+    max-width: 960px;
+}}
+@media (min-width: 768px){
+.contain, .container-md, .container-sm {
+    max-width: 720px;
+}}
+@media (min-width: 576px){
+.contain, .container-sm {
+    max-width: 540px;
+}
+}
+.contain, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.75rem;
+    padding-left: var(--bs-gutter-x,.75rem);
+    padding-right: 0.75rem;
+    padding-right: var(--bs-gutter-x,.75rem);
+    width: 100%;
 }

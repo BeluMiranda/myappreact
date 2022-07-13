@@ -26,6 +26,7 @@ function App() {
   return (
   
        <>
+       <div className="App">
        <BrowserRouter>
        <MyProvider>
        <NavBar isScrolling={scrollHeight}/>
@@ -40,7 +41,7 @@ function App() {
         <Footer />
         </MyProvider>
         </BrowserRouter> 
-         
+        </div>
         </>
   );
 }

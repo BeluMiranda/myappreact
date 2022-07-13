@@ -15,11 +15,11 @@ function NavBar({ isScrolling }) {
       <div className={`Navbar navbar-expand-lg menu ${isScrolling > 20 ? 'scrolling' : null}`}> 
         <Link to="/" className="nav-logo"><img src={logo} className="nav-logo" type="button" onClick={toTheTop} /></Link>
         <div className={`nav-items ${isOpen && "open"}`}>
-        <Link to="/products"onClick={() => setIsOpen(false)}>PRODUCTS</Link>
-          <Link to="/category/men" onClick={() => setIsOpen(false)}>MEN</Link>
-          <Link to="/category/women" onClick={() => setIsOpen(false)}>WOMEN</Link>
+        <Link to="/products"onClick={() => setIsOpen(false)}>PRODUCTOS</Link>
+          <Link to="/category/men" onClick={() => setIsOpen(false)}>HOMRE</Link>
+          <Link to="/category/women" onClick={() => setIsOpen(false)}>MUJER</Link>
           
-          <Link to="/category/kids" onClick={() => setIsOpen(false)}>KIDS</Link>
+          <Link to="/category/kids" onClick={() => setIsOpen(false)}>NIÑOS</Link>
           <Link to="/cart" onClick={() => setIsOpen(false)}><CartWidget /></Link>
         </div>
         <div

@@ -12,7 +12,7 @@ import Swal from 'sweetalert2'
 import { icon } from "@fortawesome/fontawesome-svg-core"
 
 const notify = () => {
-    toast('Add to cart 😄', {
+    toast('Producto agregado 😄', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -29,7 +29,7 @@ const showAlert = () => {
     rgba(0,0,0,0.4)
     no-repeat
   `, 
-          text: 'NO MORE STOCK',
+          text: 'No hay mas stock',
           width:'20rem',
           confirmButtonColor: '#000000',
           showClass: {
